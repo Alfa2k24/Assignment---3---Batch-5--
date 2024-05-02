@@ -1,20 +1,18 @@
 #include<stdio.h>
 
-// int count_before_one(int n){
-//     int arr[n];
-// int count = 0;
-// for(int i = 0; i < n; i++){
-//     if(arr[i] == 1){
-//         break;
-//     } else{
-//         count++;
-//     }
-// }
-
-// return count;
-
-// }
-
+int count_before_one(int arr[], int n){
+    
+int count = 0;
+for(int i = 0; i < n; i++){
+    if(arr[i] == 1){
+        break;
+    } else{
+        count++;
+    }
+    // printf("%d ",arr[i]);
+}
+return count;
+}
 
 
 
@@ -27,16 +25,10 @@ int main(){
     for(int i = 0; i < n; i++){
         scanf("%d",&arr[i]);
     }
-int count = 0;
-for(int i = 0; i < n; i++){
-    if(arr[i] == 1){
-        break;
-    } else{
-        count++;
-    }
+
+    int count = count_before_one(arr, n);
+    printf("%d",count);
+    
+return 0;    
 }
 
-//  count_before_one();
-printf("%d",count);
-return 0;
-}
